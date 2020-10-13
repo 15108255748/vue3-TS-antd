@@ -3,7 +3,7 @@ const pxtorem = require("postcss-pxtorem");
 const prodConfig = require("./prod.config");
 
 // 环境
-const IS_PROD = ["production", "prod"].includes(process.env.NODE_ENV);
+// const IS_PROD = ["production", "prod"].includes(process.env.NODE_ENV);
 
 
 
@@ -52,10 +52,7 @@ module.exports = {
     return config;
   },
   configureWebpack: config => {
-
-    if (IS_PROD) {
-      // 代码压缩
-      prodConfig.codeUglify(config);
-    }
+    // 代码压缩
+    prodConfig.codeUglify(config);
   }
 }

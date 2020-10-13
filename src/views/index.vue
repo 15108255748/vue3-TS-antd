@@ -1,13 +1,20 @@
 <template>
-<div class="v3-app">
-  <h1>这是一个首页</h1>
-  <p>任何组件都在这个页面上显示</p>
-</div>
+  <div class="v3-app">
+    <Layout></Layout>
+  </div>
 </template>
 
 <script lang="ts">
-import {
-  defineComponent
-} from "vue";
-export default defineComponent({});
+import { defineComponent } from "vue";
+import Layout from "../components/layout/index.vue";
+export default defineComponent({
+  components: {
+    Layout,
+  },
+});
 </script>
+<style lang="less" scoped>
+.v3-app {
+  height: 100vh;
+}
+</style>
